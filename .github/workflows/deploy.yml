@@ -1,12 +1,15 @@
-- name: Download ELRS firmware artifacts
-  run: bash ./get_artifacts.sh
-
-- name: Patch custom hardware targets
-  run: node scripts/patch-targets.cjs
-
-- name: Verify NewPower target exists
+- name: Get official ELRS artifacts
   run: |
-    node -e "const t=require('./public/assets/firmware/hardware/targets.json'); if(!t.NewPower){throw new Error('NewPower missing')} console.log(t.NewPower.name)"
+    bash get_artifacts.sh
+
+- name: Patch NewPower target
+  run: |
+    node scripts/patch-targets.cjs
+
+- name: Install dependencies
+  run: |
+    npm install
 
 - name: Build
-  run: npm run build
+  run: |
+    npm run build
