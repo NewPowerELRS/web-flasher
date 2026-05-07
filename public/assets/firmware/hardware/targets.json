@@ -3129,7 +3129,7 @@
               "power_min": 1,
               "power_high": 5,
               "power_max": 5,
-              "power_default": 8,
+              "power_default": 5,
               "power_values": [
                 -12,
                 -9,
