@@ -1,4 +1,3 @@
-
 const fs = require("fs");
 const path = require("path");
 
@@ -28,9 +27,13 @@ if (!fs.existsSync(customPath)) {
 }
 
 const targets = JSON.parse(fs.readFileSync(targetsPath, "utf8"));
-const newPower = JSON.parse(fs.readFileSync(customPath, "utf8"));
+const customTargets = JSON.parse(fs.readFileSync(customPath, "utf8"));
 
-targets.NewPower = newPower;
+if (!customTargets.newpower) {
+  throw new Error("custom target must contain top-level key: newpower");
+}
+
+targets.newpower = customTargets.newpower;
 
 fs.writeFileSync(targetsPath, JSON.stringify(targets, null, 2) + "\n");
 
