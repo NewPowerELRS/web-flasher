@@ -1,87 +1,117 @@
 {
-"newpower": {
-        "name": "NewPower",
-        "rx_2400": {
-          "500": {
-            "product_name": "NewPower 2.4GHz 500mW RX",
-            "lua_name": "NP 2G4 500mW RX",
-            "layout_file": "Generic 2400 PA.json",
-            "overlay": {
-              "power_min": 1,
-              "power_high": 5,
-              "power_max": 5,
-              "power_default": 5,
-              "power_values": [
-                -12,
-                -9,
-                -6,
-                -2,
-                1
-              ],
-              "power_lna_gain": 13
-            },
-            "upload_methods": [
-              "uart",
-              "wifi",
-              "betaflight"
-            ],
-            "min_version": "3.3.0",
-            "platform": "esp8285",
-            "firmware": "Unified_ESP8285_2400_RX"
-          },
-          "D250": {
-          "product_name": "NewPower Diversity 250mW 2.4GHz RX",
-          "lua_name": "NP D250",
-          "layout_file": "Generic 2400 Diversity PA.json",
-            "overlay": {
-              "power_min": 1,
-              "power_high": 4,
-              "power_max": 4,
-              "power_default": 4,
-              "power_values": [
-                -6,
-                -2,
-                1,
-                6
-              ],
-              "power_lna_gain": 13
-            },
-          "upload_methods": [
-            "uart",
-            "wifi",
-            "betaflight"
+  "newpower": {
+    "name": "NewPower",
+    "rx_2400": {
+      "500": {
+        "product_name": "NewPower 2.4GHz 500mW RX",
+        "lua_name": "NP 2G4 500mW RX",
+        "layout_file": "Generic 2400 PA.json",
+        "overlay": {
+          "power_min": 1,
+          "power_high": 5,
+          "power_max": 5,
+          "power_default": 5,
+          "power_values": [
+            -12,
+            -9,
+            -6,
+            -2,
+            1
           ],
-          "min_version": "3.0.0",
-          "platform": "esp8285",
-          "firmware": "Unified_ESP8285_2400_RX"
+          "power_lna_gain": 13
         },
-        "D500": {
-          "product_name": "NewPower Diversity 500mW 2.4GHz RX",
-          "lua_name": "NP D500",
-          "layout_file": "Generic 2400 Diversity PA.json",
-            "overlay": {
-              "power_min": 1,
-              "power_high": 5,
-              "power_max": 5,
-              "power_default": 5,
-              "power_values": [
-                -10,
-                -7,
-                -3,
-                3,
-                10
-              ],
-              "power_lna_gain": 13
-            },
-          "upload_methods": [
-            "uart",
-            "wifi",
-            "betaflight"
+        "upload_methods": [
+          "uart",
+          "wifi",
+          "betaflight"
+        ],
+        "min_version": "3.3.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_2400_RX"
+      },
+      "D250": {
+        "product_name": "NewPower Diversity 250mw 2.4GHz RX",
+        "lua_name": "NP D250",
+        "layout_file": "Generic 2400 Diversity PA.json",
+        "overlay": {
+          "power_min": 1,
+          "power_high": 4,
+          "power_max": 4,
+          "power_default": 4,
+          "power_values": [
+            -6,
+            -2,
+            1,
+            6
           ],
-          "min_version": "3.0.0",
-          "platform": "esp8285",
-          "firmware": "Unified_ESP8285_2400_RX"
-        }
-        }
+          "power_lna_gain": 13
+        },
+        "upload_methods": [
+          "uart",
+          "wifi",
+          "betaflight"
+        ],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_2400_RX"
+      },
+      "D500": {
+        "product_name": "NewPower Diversity 500mw 2.4GHz RX",
+        "lua_name": "NP D500",
+        "layout_file": "Generic 2400 Diversity PA.json",
+        "overlay": {
+          "power_min": 1,
+          "power_high": 5,
+          "power_max": 5,
+          "power_default": 5,
+          "power_values": [
+            -10,
+            -7,
+            -3,
+            3,
+            10
+          ],
+          "power_lna_gain": 13
+        },
+        "upload_methods": [
+          "uart",
+          "wifi",
+          "betaflight"
+        ],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_2400_RX"
+      },
+      "TD500": {
+        "product_name": "NewPower True Diversity 500mW 2.4GHz RX",
+        "lua_name": "NP TD500",
+        "layout_file": "Generic 2400 True Diversity PA.json",
+        "overlay": {
+          "power_min": 1,
+          "power_high": 5,
+          "power_max": 5,
+          "power_default": 5,
+          "power_values": [
+            -12,
+            -9,
+            -6,
+            -2,
+            1
+          ],
+          "power_lna_gain": 13,
+          "serial1_rx": 5,
+          "serial1_tx": 18
+        },
+        "upload_methods": [
+          "uart",
+          "wifi",
+          "betaflight"
+        ],
+        "min_version": "3.0.0",
+        "platform": "esp32",
+        "firmware": "Unified_ESP32_2400_RX",
+        "prior_target_name": "Unified_ESP32_2400_RX"
+      }
+    }
   }
 }
